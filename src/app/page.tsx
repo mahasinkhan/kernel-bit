@@ -3,11 +3,9 @@ import Why from "../components/home/Why";
 import Faq from "../components/home/Faq";
 import TechStack from "../components/home/TechStack";
 import Comparison from "../components/home/Comparison";
-import Metrics from "../components/home/Metrics";
 import VideoShowcase from "../components/home/VideoShowcase";
 import SmoothScroll from "../components/home/SmoothScroll";
 import Hero from "../components/home/Hero";
-import StackStrip from "../components/home/StackStrip";
 import Capabilities from "../components/home/Capabilities";
 import ProofBand from "../components/home/ProofBand";
 import Work from "../components/home/Work";
@@ -23,7 +21,6 @@ export default function Page() {
     <>
       <SmoothScroll />
       <Hero />
-      <StackStrip />
       <ProvenanceTrace />
       <Rise>
         <Capabilities />
@@ -36,9 +33,6 @@ export default function Page() {
       </Rise>
       <Rise>
         <Why />
-      </Rise>
-      <Rise>
-        <Metrics />
       </Rise>
       <Rise>
         <Delivery />
@@ -65,6 +59,8 @@ export default function Page() {
     </>
   );
 }
+
+
 
 
 

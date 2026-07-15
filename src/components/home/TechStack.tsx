@@ -51,7 +51,7 @@ export default function TechStack() {
         <h2 className={s.h2}>What we build with.</h2>
         <p className={s.lede}>
           Chosen for fit, not fashion. We work across the stack a modern platform actually
-          needs \u2014 and we are honest about the trade-offs of each.
+          needs &mdash; and we are honest about the trade-offs of each.
         </p>
 
         <div className={s.stackGrid}>
@@ -73,3 +73,4 @@ export default function TechStack() {
     </section>
   );
 }
+

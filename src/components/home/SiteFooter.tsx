@@ -87,15 +87,13 @@ export default function SiteFooter() {
           </span>
 
           <span className={s.ftrLegal}>
-            <a href="/privacy">Privacy</a>
-            <a href="/terms">Terms</a>
-            <a href="/accessibility">Accessibility</a>
           </span>
         </div>
       </div>
     </footer>
   );
 }
+
 
 
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     siteName: site.name,
-    locale: "en_GB",
+    locale: "en_US",
     type: "website",
   },
   robots: { index: true, follow: true },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
  
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-GB" className="h-full" data-scroll-behavior="smooth">
+    <html lang="en" className="h-full" data-scroll-behavior="smooth">
       <body className="flex min-h-full flex-col">
         <a
           href="#main"
