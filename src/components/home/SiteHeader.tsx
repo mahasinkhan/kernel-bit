@@ -7,6 +7,7 @@ import { fontClass } from "./fonts";
 const LINKS = [
   { href: "/capabilities", label: "Capabilities" },
   { href: "/sectors", label: "Sectors" },
+  { href: "/work", label: "Work" },
   { href: "/#how-we-work", label: "How we work" },
   { href: "/about", label: "About" },
 ];
@@ -85,4 +86,5 @@ export default function SiteHeader() {
     </header>
   );
 }
+
 
