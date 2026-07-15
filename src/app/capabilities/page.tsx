@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
 import { CtaBand } from "@/components/cta-band";
@@ -31,12 +32,23 @@ export default function CapabilitiesPage() {
                 <Reveal delay={i * 60}>
                   <Link
                     href={`/capabilities/${c.slug}`}
-                    className="group relative grid gap-4 border-b border-rule py-10 transition-colors hover:bg-plate md:grid-cols-[3rem_11rem_1fr_auto] md:items-baseline md:gap-8 md:px-4"
+                    className="group relative grid gap-5 border-b border-rule py-8 transition-colors hover:bg-plate md:grid-cols-[3rem_13rem_1fr_auto] md:items-center md:gap-8 md:px-4"
                   >
                     <span className="display-md text-[1.5rem] leading-none text-ink-3 transition-colors group-hover:text-signal">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="label text-signal">{c.stage ?? "Cross-cutting"}</span>
+                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-plate">
+                      <Image
+                        src={`/images/pages/capabilities/${c.slug}.jpg`}
+                        alt=""
+                        fill
+                        sizes="(min-width:768px) 13rem, 100vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                      />
+                      <span className="label absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-signal">
+                        {c.stage ?? "Cross-cutting"}
+                      </span>
+                    </div>
                     <div>
                       <h2 className="display-md text-[1.75rem] leading-tight text-ink transition-colors group-hover:text-signal sm:text-[2rem]">
                         {c.name}
@@ -61,3 +73,4 @@ export default function CapabilitiesPage() {
     </>
   );
 }
+
