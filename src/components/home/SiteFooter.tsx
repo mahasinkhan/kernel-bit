@@ -29,7 +29,6 @@ const COLS = [
     links: [
       { label: "How we work", href: "/#how-we-work" },
       { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -86,8 +85,6 @@ export default function SiteFooter() {
             &copy; 2026 KernelBit &middot; Kolkata, West Bengal, India
           </span>
 
-          <span className={s.ftrLegal}>
-          </span>
         </div>
       </div>
     </footer>
