@@ -1,6 +1,8 @@
 import s from "./home.module.css";
 import { fontClass } from "./fonts";
 import HeroGraph from "./HeroGraph";
+import HeroParallax from "./HeroParallax";
+import HeroWebGLGate from "./HeroWebGLGate";
 
 /* The background graphic is a directed graph: a record moving through the
    system. Five columns, one highlighted route, one pulse travelling it.
@@ -16,13 +18,15 @@ const RAIL = [
 export default function Hero() {
   return (
     <section className={[fontClass, s.tokens, s.hero].join(" ")}>
-      <div className={s.bg} aria-hidden="true">
+      <HeroParallax />
+      <div className={s.bg} data-hero-bg aria-hidden="true">
         <div className={s.bgPlate} />
         <div className={s.bgPhoto} />
         <div className={s.bgScrim} />
         <div className={s.bgMesh} />
 
         <HeroGraph />
+        <HeroWebGLGate />
 
         <div className={s.bgGrain} />
       </div>
@@ -96,6 +100,9 @@ export default function Hero() {
     </section>
   );
 }
+
+
+
 
 
 

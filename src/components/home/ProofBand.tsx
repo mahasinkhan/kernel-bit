@@ -1,5 +1,6 @@
 import s from "./home.module.css";
 import { fontClass } from "./fonts";
+import Parallax from "./Parallax";
 
 /* TODO: swap these three for your real figures before launch. */
 const STATS = [
@@ -13,14 +14,16 @@ export default function ProofBand() {
     <section className={[fontClass, s.tokens, s.white].join(" ")}>
       <div className={s.wrap}>
         <div className={s.proofInner}>
-          <div className={[s.plate, s.proofPlate].join(" ")}>
-            <div
-              className={s.platePhoto}
-              style={{ backgroundImage: "url(/images/proof.jpg)" }}
-              aria-hidden="true"
-            />
-            <div className={s.plateEdge} aria-hidden="true" />
-          </div>
+          <Parallax speed={6}>
+            <div className={[s.plate, s.proofPlate].join(" ")}>
+              <div
+                className={s.platePhoto}
+                style={{ backgroundImage: "url(/images/proof.jpg)" }}
+                aria-hidden="true"
+              />
+              <div className={s.plateEdge} aria-hidden="true" />
+            </div>
+          </Parallax>
 
           <div>
             <p className={s.eyebrow}>Our standard</p>
@@ -51,5 +54,8 @@ export default function ProofBand() {
     </section>
   );
 }
+
+
+
 
 

@@ -5,6 +5,7 @@ import TechStack from "../components/home/TechStack";
 import Comparison from "../components/home/Comparison";
 import Metrics from "../components/home/Metrics";
 import VideoShowcase from "../components/home/VideoShowcase";
+import SmoothScroll from "../components/home/SmoothScroll";
 import Hero from "../components/home/Hero";
 import StackStrip from "../components/home/StackStrip";
 import Capabilities from "../components/home/Capabilities";
@@ -20,6 +21,7 @@ import { ProvenanceTrace } from "../components/provenance-trace";
 export default function Page() {
   return (
     <>
+      <SmoothScroll />
       <Hero />
       <StackStrip />
       <ProvenanceTrace />
@@ -63,6 +65,7 @@ export default function Page() {
     </>
   );
 }
+
 
 
 

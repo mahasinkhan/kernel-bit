@@ -12,9 +12,9 @@
   --kb-blue-deep: #16309e;
   --kb-wash: #edf1fe;
 
-  --kb-s1: 0 1px 2px rgba(10, 23, 48, 0.05);
-  --kb-s2: 0 2px 4px rgba(10, 23, 48, 0.04), 0 14px 30px -12px rgba(10, 23, 48, 0.14);
-  --kb-s3: 0 4px 10px rgba(10, 23, 48, 0.05), 0 28px 56px -20px rgba(10, 23, 48, 0.22);
+  --kb-s1: 0 1px 3px rgba(10, 23, 48, 0.04), 0 1px 2px rgba(10, 23, 48, 0.03);
+  --kb-s2: 0 4px 12px -2px rgba(10, 23, 48, 0.06), 0 18px 40px -16px rgba(10, 23, 48, 0.16);
+  --kb-s3: 0 8px 20px -4px rgba(10, 23, 48, 0.08), 0 40px 80px -24px rgba(35, 71, 245, 0.20);
 
   --kb-sans-stack: var(--kb-sans, "Archivo", "Helvetica Neue", Arial, sans-serif);
   --kb-mono-stack: var(--kb-mono, "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace);
@@ -22,7 +22,7 @@
 
   --kb-gutter: clamp(20px, 4vw, 56px);
   --kb-max: 1280px;
-  --kb-pad: clamp(84px, 9vw, 148px);
+  --kb-pad: clamp(104px, 11vw, 184px);
 
   font-family: var(--kb-sans-stack);
   color: var(--kb-ink);
@@ -64,19 +64,19 @@
 .eyebrow::before { content: ""; width: 24px; height: 1px; background: currentColor; flex: none; }
 
 .h2 {
-  font-size: clamp(30px, 3.5vw, 50px);
-  line-height: 1.06;
-  letter-spacing: -0.028em;
+  font-size: clamp(36px, 4.4vw, 62px);
+  line-height: 1.0;
+  letter-spacing: -0.036em;
   font-weight: 700;
-  margin: 20px 0 0;
-  max-width: 20ch;
+  margin: 24px 0 0;
+  max-width: 18ch;
 }
 
 .lede {
-  margin: 20px 0 0;
-  font-size: clamp(16px, 1.15vw, 18px);
-  line-height: 1.65;
-  max-width: 58ch;
+  margin: 24px 0 0;
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.7;
+  max-width: 56ch;
   color: var(--kb-slate);
 }
 
@@ -95,8 +95,8 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 16px 26px;
-  border-radius: 8px;
+  padding: 17px 30px;
+  border-radius: 12px;
   border: 1px solid var(--kb-blue);
   background: var(--kb-blue);
   color: #ffffff;
@@ -171,7 +171,7 @@
 .plate {
   position: relative;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 20px;
   background-color: #dbe3f7;
   background-image: linear-gradient(160deg, #e6ecff 0%, #c3d0f2 55%, #a9bce9 100%);
   box-shadow: var(--kb-s2);
@@ -191,7 +191,7 @@
 .plateEdge {
   position: absolute;
   inset: 0;
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(10, 23, 48, 0.08);
   pointer-events: none;
 }
@@ -245,12 +245,14 @@
 .capCard {
   position: relative;
   overflow: hidden;
-  background: var(--kb-surface);
-  border: 1px solid var(--kb-line);
-  border-radius: 14px;
-  padding: 28px 26px 26px;
-  box-shadow: var(--kb-s1);
-  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.8);
+  border-radius: 20px;
+  padding: 32px 30px 30px;
+  box-shadow: var(--kb-s2);
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;
 }
 
 .capCard::before {
@@ -264,7 +266,7 @@
   transition: width 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.capCard:hover { transform: translateY(-4px); box-shadow: var(--kb-s3); border-color: var(--kb-line-2); }
+.capCard:hover { transform: translateY(-6px); box-shadow: var(--kb-s3); }
 .capCard:hover::before { width: 100%; }
 
 .capTop { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
@@ -449,7 +451,7 @@
 .sectorCard {
   background: var(--kb-surface);
   border: 1px solid var(--kb-line);
-  border-radius: 14px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--kb-s1);
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
@@ -499,7 +501,7 @@
   flex-direction: column;
   background: var(--kb-surface);
   border: 1px solid var(--kb-line);
-  border-radius: 14px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--kb-s1);
   transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -635,11 +637,13 @@
 
 .bgPhoto {
   position: absolute;
-  top: 0; right: 0; bottom: 0;
+  top: -8%; right: 0; bottom: -8%;
   width: 52%;
   background-image: url("/images/hero.jpg");
   background-size: cover;
   background-position: center;
+  transform: translateY(var(--kb-py, 0));
+  will-change: transform;
   filter: contrast(1.03);
   mix-blend-mode: multiply;
   opacity: 0.72;
@@ -721,7 +725,7 @@
   gap: 1px;
   background: rgba(10, 23, 48, 0.09);
   border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 14px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--kb-s2);
   -webkit-backdrop-filter: blur(14px) saturate(150%);
@@ -753,7 +757,7 @@
   width: 330px;
   margin: 0;
   padding: 18px 20px 16px;
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.85);
   background: rgba(255, 255, 255, 0.8);
   box-shadow: var(--kb-s3);
@@ -1342,7 +1346,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 20px;
   border: 1px solid rgba(10, 23, 48, 0.08);
   background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
   box-shadow: 0 1px 2px rgba(10, 23, 48, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -1573,7 +1577,7 @@
 .stackCol {
   background: var(--kb-surface);
   border: 1px solid var(--kb-line);
-  border-radius: 14px;
+  border-radius: 20px;
   padding: 26px 24px 24px;
   box-shadow: var(--kb-s1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1908,7 +1912,7 @@
   padding: 6px 12px;
 }
 
-.whyStack { display: grid; gap: 1px; background: var(--kb-line); border: 1px solid var(--kb-line); border-radius: 14px; overflow: hidden; }
+.whyStack { display: grid; gap: 1px; background: var(--kb-line); border: 1px solid var(--kb-line); border-radius: 20px; overflow: hidden; }
 
 .whyRow {
   background: var(--kb-surface);
@@ -1928,4 +1932,143 @@
 @media (max-width: 900px) {
   .whyLayout { grid-template-columns: 1fr; }
   .whyMedia { aspect-ratio: 16 / 10; }
+}
+
+
+
+/* ---------- animated gradient mesh ---------- */
+
+.mesh {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.meshBlob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+
+.meshA {
+  width: 42vw; height: 42vw;
+  top: -8vw; right: 4vw;
+  background: radial-gradient(circle, rgba(35,71,245,0.55), transparent 68%);
+  animation: meshFloatA 18s ease-in-out infinite;
+}
+
+.meshB {
+  width: 36vw; height: 36vw;
+  top: 18vw; right: 22vw;
+  background: radial-gradient(circle, rgba(99,102,241,0.42), transparent 68%);
+  animation: meshFloatB 22s ease-in-out infinite;
+}
+
+.meshC {
+  width: 30vw; height: 30vw;
+  bottom: -6vw; right: -2vw;
+  background: radial-gradient(circle, rgba(56,189,248,0.34), transparent 68%);
+  animation: meshFloatC 26s ease-in-out infinite;
+}
+
+@keyframes meshFloatA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-6%, 8%) scale(1.12); }
+  66% { transform: translate(4%, -5%) scale(0.94); }
+}
+
+@keyframes meshFloatB {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-10%, -8%) scale(1.15); }
+}
+
+@keyframes meshFloatC {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  40% { transform: translate(8%, -10%) scale(1.1); }
+  75% { transform: translate(-4%, 4%) scale(0.9); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .meshA, .meshB, .meshC { animation: none; }
+}
+
+
+/* ============================================================
+   RESPONSIVE PASS - tablets and phones, all sections
+   Appended last so these win. Covers the newer sections that
+   had no breakpoints, plus global scaling.
+   ============================================================ */
+
+/* ---- tablet ---- */
+@media (max-width: 900px) {
+  .tokens { --kb-pad: clamp(72px, 9vw, 104px); --kb-gutter: clamp(20px, 5vw, 40px); }
+
+  .h1 { font-size: clamp(38px, 8vw, 58px); }
+  .h2 { font-size: clamp(30px, 5.5vw, 46px); }
+
+  /* why: stack image over reasons */
+  .whyLayout { grid-template-columns: 1fr; gap: 28px; }
+  .whyMedia { aspect-ratio: 16 / 10; }
+
+  /* tech stack: 2 columns */
+  .stackGrid { grid-template-columns: repeat(2, 1fr); }
+
+  /* metrics: 2 up */
+  .metricGrid { grid-template-columns: repeat(2, 1fr); gap: 30px 24px; }
+
+  /* delivery rail already 2-up; engagement + capability grids auto-fit fine */
+}
+
+/* ---- phone ---- */
+@media (max-width: 560px) {
+  .tokens { --kb-pad: clamp(56px, 14vw, 80px); --kb-gutter: 18px; }
+
+  .h1 { font-size: clamp(32px, 9vw, 44px); line-height: 1.04; }
+  .h2 { font-size: clamp(26px, 8vw, 34px); }
+  .lede, .heroLede { font-size: 16px; }
+
+  /* single column everywhere */
+  .capGrid, .sectorGrid, .tbGrid, .stackGrid, .whyStack { grid-template-columns: 1fr; }
+  .metricGrid { grid-template-columns: repeat(2, 1fr); gap: 26px 16px; }
+  .metricNum { font-size: clamp(30px, 11vw, 40px); }
+
+  /* hero: comfortable stack */
+  .heroInner { gap: 28px; }
+  .heroCtas { flex-direction: column; align-items: stretch; }
+  .heroCtas a { width: 100%; justify-content: center; }
+  .heroMeta { gap: 8px 18px; }
+
+  /* the glass rail under hero: single column so it doesn't cram */
+  .rail { grid-template-columns: 1fr; }
+
+  /* cards: a touch more padding room */
+  .capCard, .whyRow, .stackCol { padding: 24px 22px; }
+
+  /* faq: tighter answer padding */
+  .faqA { padding-right: 16px; }
+  .faqQ { font-size: 16px; }
+
+  /* video caption doesn't overflow */
+  .videoTitle { font-size: 20px; }
+  .videoInner { padding: 20px; }
+
+  /* buttons: full-width, finger-sized */
+  .btnPrimary, .btnGhost, .btnOnBlue { width: 100%; justify-content: center; padding: 16px 24px; }
+
+  /* comparison already stacks via its own 720 rule; ensure readability */
+  .cmpCriterion { font-size: 14px; }
+
+  /* proof stats stack */
+  .statGrid { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ---- very small phones ---- */
+@media (max-width: 380px) {
+  .metricGrid { grid-template-columns: 1fr; }
+  .h1 { font-size: 30px; }
 }
