@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container";
-import { Eyebrow } from "@/components/eyebrow";
+import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
 import { Plate } from "@/components/plate";
 import { CtaBand } from "@/components/cta-band";
@@ -32,15 +32,12 @@ export default async function CapabilityPage({ params }: Params) {
  
   return (
     <>
-      <section className="grid-paper border-b border-rule">
-        <Container className="pt-16 pb-16 sm:pt-24 sm:pb-20">
-          <Reveal className="max-w-3xl">
-            <Eyebrow>{capability.stage ? `Stage \u2014 ${capability.stage}` : "Cross-cutting"}</Eyebrow>
-            <h1 className="display mt-7 text-[2.5rem] text-ink sm:text-[3.75rem]">{capability.name}</h1>
-            <p className="mt-8 max-w-2xl text-[1.25rem] leading-snug text-ink">{capability.lede}</p>
-          </Reveal>
-        </Container>
-      </section>
+      <PageHero
+        eyebrow={capability.stage ? `Stage \u2014 ${capability.stage}` : "Cross-cutting"}
+        title={capability.name}
+        image={`/images/pages/capabilities/${capability.slug}.jpg`}
+        intro={capability.lede}
+      />
  
       <section className="border-b border-rule">
         <Container className="py-16 sm:py-24">

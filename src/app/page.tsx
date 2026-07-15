@@ -9,12 +9,14 @@ import Sectors from "../components/home/Sectors";
 import Engagements from "../components/home/Engagements";
 import CtaBand from "../components/home/CtaBand";
 import Interactions from "../components/home/Interactions";
+import { ProvenanceTrace } from "../components/provenance-trace";
 
 export default function Page() {
   return (
     <>
       <Hero />
       <StackStrip />
+      <ProvenanceTrace />
       <Rise>
         <Capabilities />
       </Rise>

@@ -9,10 +9,10 @@ export const site = {
   description:
     "KernelBit designs and builds the data platforms, models and applications used in finance, healthcare and the public sector \u2014 engineered so every output can be traced back to the record it came from.",
   url: "https://kernelbit.com", // TODO
-  location: "London", // TODO
+  location: "Kolkata",
   email: "hello@kernelbit.com", // TODO
   phone: "+44 20 0000 0000", // TODO
-  address: ["Address line one", "Address line two", "London EC1A 1AA"], // TODO
+  address: ["Address line one", "Address line two", "Kolkata, West Bengal 700000"],
   companyNo: "00000000", // TODO: never ship the placeholder company number
   nav: [
     { href: "/capabilities", label: "Capabilities" },
@@ -20,3 +20,4 @@ export const site = {
     { href: "/about", label: "About" },
   ],
 } as const;
+

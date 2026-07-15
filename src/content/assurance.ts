@@ -7,7 +7,7 @@ export type AssuranceRow = { control: string; commitment: string };
 export const assurance: AssuranceRow[] = [
   {
     control: "Residency",
-    commitment: "UK and EU regions by default. Client data is never used to train shared models.",
+    commitment: "Data stays in the region you choose. Client data is never used to train shared models.",
   },
   {
     control: "Access",
@@ -27,6 +27,7 @@ export const assurance: AssuranceRow[] = [
   },
   {
     control: "Standards",
-    commitment: "Engagements run to ISO 27001, Cyber Essentials Plus and NHS DSPT expectations.",
+    commitment: "Engagements run to ISO 27001 and SOC 2 expectations, mapped to your regulator.",
   },
 ];
+

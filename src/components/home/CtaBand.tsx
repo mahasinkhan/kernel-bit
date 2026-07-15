@@ -18,7 +18,7 @@ export default function CtaBand() {
               the first call, not a salesperson.
             </p>
             {/* TODO: real address, real phone */}
-            <p className={s.ctaMeta}>hello@kernelbit.com &middot; London, UK</p>
+            <p className={s.ctaMeta}>hello@kernelbit.com &middot; Kolkata &middot; Working globally</p>
           </div>
 
           <a className={s.btnOnBlue} href="mailto:hello@kernelbit.com">
@@ -30,4 +30,6 @@ export default function CtaBand() {
     </section>
   );
 }
+
+
 

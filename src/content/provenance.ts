@@ -33,7 +33,7 @@ export const payloads: Payload[] = [
   {
     id: "payment",
     label: "A payment",
-    record: "GBP 24,500.00 \u00b7 SEPA CT \u00b7 ref 8842-QK",
+    record: "Transaction 24,500.00 \u00b7 ledger entry \u00b7 ref 8842-QK",
     stamps: [
       { at: "t+0ms", note: "Raw message stored, byte for byte." },
       { at: "t+40ms", note: "Normalised to ISO 20022. Units checked." },

@@ -29,7 +29,7 @@ export default function Hero() {
 
       <div className={s.wrap}>
         <div className={s.heroCopy}>
-          <p className={s.eyebrow}>London &middot; Software, data, AI &amp; cloud</p>
+          <p className={s.eyebrow}>Kolkata &middot; Software, data, AI &amp; cloud</p>
 
           <h1 className={s.h1}>
             Systems that can{" "}
@@ -65,12 +65,12 @@ export default function Hero() {
             </span>
           </div>
 
-          <p className={s.tcTitle}>Payment reconciled &mdash; GBP 24,500.00</p>
+          <p className={s.tcTitle}>Transaction reconciled &mdash; 24,500.00</p>
 
           <ul className={s.tcRows}>
             <li className={s.tcRow}>
               <span className={s.tcKey}>Source</span>
-              <span className={s.tcVal}>SEPA CT &middot; ref 8842-QK</span>
+              <span className={s.tcVal}>Ledger entry &middot; ref 8842-QK</span>
             </li>
             <li className={s.tcRow}>
               <span className={s.tcKey}>Model</span>
@@ -96,4 +96,6 @@ export default function Hero() {
     </section>
   );
 }
+
+
 
