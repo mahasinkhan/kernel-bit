@@ -83,8 +83,7 @@ export default function SiteFooter() {
         <div className={s.ftrBar}>
           {/* TODO: real company number, VAT number, registered office */}
           <span>
-            &copy; 2026 KernelBit Ltd &middot; Registered in England &amp; Wales
-            &middot; Company no. 00000000
+            &copy; 2026 KernelBit &middot; Kolkata, West Bengal, India
           </span>
 
           <span className={s.ftrLegal}>
@@ -97,4 +96,6 @@ export default function SiteFooter() {
     </footer>
   );
 }
+
+
 
