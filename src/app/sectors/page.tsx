@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { Arrow } from "@/components/arrow";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
 import { CtaBand } from "@/components/cta-band";
@@ -81,6 +83,16 @@ export default function SectorsPage() {
                           </li>
                         ))}
                       </ul>
+
+                      {sector.detail ? (
+                        <Link
+                          href={`/sectors/${sector.slug}`}
+                          className="group mt-8 inline-flex items-center gap-2 text-[1rem] font-medium text-ink transition-colors hover:text-signal"
+                        >
+                          Explore {sector.name.split(" &")[0]}
+                          <Arrow className="h-[0.7em] w-[0.9em] transition-transform group-hover:translate-x-1" />
+                        </Link>
+                      ) : null}
                     </div>
                   </div>
                 </Reveal>
@@ -98,4 +110,5 @@ export default function SectorsPage() {
     </>
   );
 }
+
 
