@@ -27,7 +27,7 @@ export function PageHero({
             fill
             priority
             sizes="60vw"
-            className="object-cover opacity-[0.18] mix-blend-multiply grayscale [mask-image:linear-gradient(90deg,transparent,#000_42%)]"
+            className="object-cover opacity-30 [mask-image:linear-gradient(90deg,transparent,#000_42%)]"
           />
         ) : null}
         <div className="absolute inset-0 bg-[radial-gradient(46rem_30rem_at_88%_6%,rgba(35,71,245,0.10),transparent_62%)]" />
@@ -49,3 +49,4 @@ export function PageHero({
     </section>
   );
 }
+

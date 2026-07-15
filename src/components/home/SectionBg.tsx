@@ -26,11 +26,13 @@ export default function SectionBg({ src, onBlue = false, amount = 9 }: Props) {
       className={[s.secBg, onBlue ? s.secBgOnBlue : ""].join(" ")}
       aria-hidden="true"
     >
-      <motion.div
-        className={s.secBgImg}
-        style={{ backgroundImage: "url(" + src + ")", y: reduce ? 0 : y }}
-      />
+      <motion.div className={s.secBgImg} style={{ y: reduce ? 0 : y }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt="" loading="lazy" decoding="async" aria-hidden="true"
+             style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </motion.div>
       <div className={s.secBgVeil} />
     </div>
   );
 }
+

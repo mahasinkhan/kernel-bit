@@ -1,4 +1,10 @@
 import Rise from "../components/home/Rise";
+import Why from "../components/home/Why";
+import Faq from "../components/home/Faq";
+import TechStack from "../components/home/TechStack";
+import Comparison from "../components/home/Comparison";
+import Metrics from "../components/home/Metrics";
+import VideoShowcase from "../components/home/VideoShowcase";
 import Hero from "../components/home/Hero";
 import StackStrip from "../components/home/StackStrip";
 import Capabilities from "../components/home/Capabilities";
@@ -21,7 +27,16 @@ export default function Page() {
         <Capabilities />
       </Rise>
       <Rise>
+        <VideoShowcase />
+      </Rise>
+      <Rise>
         <ProofBand />
+      </Rise>
+      <Rise>
+        <Why />
+      </Rise>
+      <Rise>
+        <Metrics />
       </Rise>
       <Rise>
         <Delivery />
@@ -30,7 +45,16 @@ export default function Page() {
         <Sectors />
       </Rise>
       <Rise>
+        <TechStack />
+      </Rise>
+      <Rise>
         <Engagements />
+      </Rise>
+      <Rise>
+        <Comparison />
+      </Rise>
+      <Rise>
+        <Faq />
       </Rise>
       <Rise>
         <CtaBand />
@@ -39,5 +63,11 @@ export default function Page() {
     </>
   );
 }
+
+
+
+
+
+
 
 

@@ -51,7 +51,7 @@ export default function SectorsPage() {
                         alt=""
                         fill
                         sizes="(min-width: 1024px) 40vw, 90vw"
-                        className="object-cover opacity-90 mix-blend-multiply grayscale"
+                        className="object-cover"
                       />
                       <span
                         aria-hidden
@@ -98,3 +98,4 @@ export default function SectorsPage() {
     </>
   );
 }
+
